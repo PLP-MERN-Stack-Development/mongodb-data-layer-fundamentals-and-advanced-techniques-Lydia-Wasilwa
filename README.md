@@ -1,14 +1,39 @@
-# MongoDB Fundamentals - Week 1
+# Week 1
 
-## Setup Instructions
+## 🚀 Overview
+This project demonstrates the fundamentals and advanced techniques of working with **MongoDB**.  
+It includes creating a database, inserting book documents, performing CRUD operations, running advanced queries, and optimizing performance with indexing.
 
-Before you begin this assignment, please make sure you have the following installed:
+---
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+## 🛠️ Setup Instructions
 
-### Node.js Package Setup
+### 1. Install MongoDB
+- Download and install **MongoDB Community Edition** from [MongoDB Official Downloads](https://www.mongodb.com/try/download/community).
+- Ensure that the MongoDB service (`mongod`) is running on your local machine (default port: **27017**).  
+- Download and install [**MongoDB Shell**](https://www.mongodb.com/try/download/shell)
+
+  You can test this in CMD:
+  ```bash
+  mongosh
+  ```
+  If it connects successfully, MongoDB is running.
+
+### 2. Install Node.js
+- Download and install **Node.js** from [Node.js Official Website](https://nodejs.org/).
+- Verify installation:
+  ```bash
+  node -v
+  npm -v
+  ```
+
+### 3. Clone the Repository
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/mongodb-data-layer-fundamentals-and-advanced-techniques-Lydia-Wasilwa.git
+cd mongodb-data-layer-fundamentals-and-advanced-techniques-Lydia-Wasilwa
+```
+
+### 4. Node.js Package Setup
 
 Once you have Node.js installed, run the following commands in your assignment directory:
 
@@ -20,31 +45,44 @@ npm init -y
 npm install mongodb
 ```
 
-## Assignment Overview
+## 📂 Files in this Project
+- `insert_books.js` → Script to insert sample book data into the `books` collection.  
+- `queries.js` → Contains MongoDB queries for CRUD operations, advanced queries, and indexing.  
+- `README.md` → Instructions on how to set up and run the project.  
+- `screenshot.png` → Proof of MongoDB Compass showing sample data.  
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+---
 
-## Submission
+## ▶️ Running the Scripts
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
+### 1. Insert Books into Database
+Run the provided script to insert sample book data:
+```bash
+node insert_books.js
+```
 
-## Getting Started
+This will connect to `mongodb://localhost:27017`, create a database called **plp_bookstore**, and insert documents into the `books` collection.
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+### 2. Run Queries in MongoDB Shell
+Open the MongoDB shell:
+```bash
+mongosh
+```
+Then switch to your database:
+```javascript
+use plp_bookstore
+```
+Now copy-paste the queries from `queries.js` to test them.
 
-## Files Included
+---
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+## 📌 Notes
+- Make sure MongoDB is running before executing the scripts.  
+- Use **MongoDB Compass** if you prefer a GUI to view and manage data.  
+- Indexing results can be checked with:
+```javascript
+db.books.getIndexes();
+```
 
 ## Requirements
 
